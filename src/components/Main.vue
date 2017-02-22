@@ -8,7 +8,7 @@
                     <el-option label="填空题" value="3"></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="试题内容">
+            <el-form-item label="试卷名">
                 <el-input v-model="form.title"></el-input>
             </el-form-item>
             <el-form-item label="所属学科">
@@ -62,7 +62,7 @@
 </template>
 <script>
 export default {
-    name: 'topic',
+    name: 'main',
     data() {
         return {
             position: 'left',
