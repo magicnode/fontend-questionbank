@@ -62,7 +62,7 @@
 </template>
 <script>
 export default {
-    name: 'topic',
+    name: 'topiccreate',
     data() {
         return {
             position: 'left',
@@ -83,13 +83,13 @@ export default {
                 items: [{
                     sign: 'A',
                     detail: ''
-                },{
+                }, {
                     sign: 'B',
                     detail: ''
-                },{
+                }, {
                     sign: 'C',
                     detail: ''
-                },{
+                }, {
                     sign: 'D',
                     detail: ''
                 }],
@@ -100,7 +100,7 @@ export default {
         }
     },
     created() {
-        function charcode () {
+        function charcode() {
             let arr = [];
             for (var i = 65; i < 91; i++) {
                 let charcode = String.fromCharCode(i);
@@ -119,13 +119,13 @@ export default {
         onSubmit() {
             this.$http.post('topics', this.form).then(response => {
                 this.$message({
-                  message: '题目创建成功',
-                  type: 'success',
-                  showClose: true,
-                  duration: 2300,
-                  onClose: () => {
-                    // return this.$router.go({name: 'topic'});                    
-                  }
+                    message: '题目创建成功',
+                    type: 'success',
+                    showClose: true,
+                    duration: 2300,
+                    onClose: () => {
+                        // return this.$router.go({name: 'topic'});                    
+                    }
                 });
             }, response => {
                 console.log("response", response)
@@ -133,7 +133,9 @@ export default {
             });
         },
         onDestroy() {
-            this.$router.go({name: 'topic'});
+            this.$router.go({
+                name: 'topic'
+            });
         },
         addChoice(items) {
             const length = items.length;

@@ -47,7 +47,7 @@
 </template>
 <script>
 export default {
-    name: 'as',
+    name: 'topicshow',
     data() {
         return {
             position: 'left',

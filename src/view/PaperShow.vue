@@ -59,7 +59,7 @@
 </template>
 <script>
 export default {
-    name: 'paperhand',
+    name: 'papershow',
     created() {
         this.$http.get('points').then(response => {
             this.selectoptions = response.body
