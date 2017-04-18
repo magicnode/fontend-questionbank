@@ -20,6 +20,14 @@ export default new Router({
         name: 'PaperAuto',
         component: require('view/PaperAuto')
       }, {
+        path: 'paper/show',
+        name: 'PaperShow',
+        component: require('view/PaperShow')
+      }, {
+        path: 'paper/demo',
+        name: 'PaperDemo',
+        component: require('view/PaperDemo')
+      }, {
         path: 'topic/create',
         name: 'TopicCreate',
         component: require('view/TopicCreate')
@@ -27,6 +35,10 @@ export default new Router({
         path: 'topic/show',
         name: 'TopicShow',
         component: require('view/TopicShow')
+      }, {
+        path: '/login',
+        name: 'Login',
+        component: require('view/Login')
       }]
     }
   ]
